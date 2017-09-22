@@ -10,7 +10,9 @@
 在新的模块系统中:
 
 1. 引入了一个新的可选的阶段, link-time. link-time是介于compile-time和run-time之间的,
-在link-time 期间, 一组module可以被打包和优化进一个自定义的运行时镜像(小型容器?). 详情见 jlink tool in Java Platform, Standard Edition Tools Reference
+在link-time 期间, 一组module可以被打包和优化进一个自定义的运行时镜像(小型容器?).
+
+详情见 [jlink](https://docs.oracle.com/javase/9/tools/jlink.htm#JSWOR-GUID-CECAC52B-CFEE-46CB-8166-F17A8E9280E9) tool in Java Platform, Standard Edition Tools Reference
 
 2. 在java的工具javac, jlink 和java中添加了新的option, 用来指定特定的module paths. Module path 定位了 Module 的定义.
 
@@ -56,3 +58,21 @@ JDK模块本身已经被分成了一组模块. 变化如下:
 略
 
 ## What’s New for Tools in JDK 9
+
+### JShell
+
+ 在Java平台中添加了REPL功能. JShell提供了一个交互的命令行接口用来在Java编程平台上运行并计算declarations, statements, and expressions. 这个功能可以立即获得代码的运算结果或者反馈, 从而促进代码的开发以及为Java学习提供帮助.
+
+ 详情见 [jshell](https://docs.oracle.com/javase/9/tools/jshell.htm#JSWOR-GUID-C337353B-074A-431C-993F-60C226163F00) in Java Platform, Standard Edition Tools Reference 以及 Introduction to JShell in Java Platform, Standard Edition Java Shell User’s Guide.
+
+### Add More Diagnostic Commands
+
+ 添加了更多的诊断命令从而提高诊断JDK和HotSpot的能力
+
+ 详情见 [jcmd](https://docs.oracle.com/javase/9/tools/jcmd.htm#JSWOR743) in Java Platform, Standard Edition Tools Reference.
+
+### Remove Launch-Time JRE Version Selection
+
+ 去除了请求一个和加载时jre版本不同的jre版本的功能.
+
+ 现代的应用大多数通过Java Web Start, 本地OS 打包系统或者是安装包进行部署. 这些技术有他们自己的方法来管理所需要的JRE版本, 例如查找, 下载或者更新等. 因此 Launch-Time JRE Version Selection 这个功能已经过时了.
