@@ -18,7 +18,7 @@
 
 3. 引入了模块化的JAR文件(在根目录中有module-info.class)
 
-4. 引入了JMOD格式. 这个格式是一种和JAR相似的打包格式, 但是他可以包含native code和配置文件. 详情见 jmod tool
+4. 引入了JMOD格式. 这个格式是一种和JAR相似的打包格式, 但是他可以包含native code和配置文件. 详情见 [jmod](https://docs.oracle.com/javase/9/tools/jmod.htm#JSWOR-GUID-0A0BDFF6-BE34-461B-86EF-AAC9A555E2AE) tool
 
 
 JDK模块本身已经被分成了一组模块. 变化如下:
