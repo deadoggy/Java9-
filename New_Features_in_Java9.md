@@ -240,3 +240,39 @@ JDK模块本身已经被分成了一组模块. 变化如下:
   5. 添加了接口私有方法的支持
 
   详情见 (Java Language Changes for Java SE 9 )[https://docs.oracle.com/javase/9/language/toc.htm#JSLAN-GUID-16A5183A-DC0D-4A96-B9D8-AAC9671222DD]
+
+## What’s New for Javadoc in JDK 9
+
+### Simplified Doclet API
+
+  用一种新的简化的API替代了旧的Doclet API. 标准doclet已经用新的Doclet API重写了.
+
+### HTML5 Javadoc
+
+  支持HTML5格式的输出。 为了确保和HTML5兼容， 请确保文档注释中的内容和H5兼容.
+
+### Javadoc Search
+
+  提供了一个搜索框来搜索API文档。 可以使用这个搜索框去查找程序元素， 关键词以及文档中的短语。
+
+### Module System
+
+  支持模块声明中的文档注释。 添加了新的命令行选项，用于配置哪些模块需要被纳入文档以及这些模块的总结。
+
+## What’s New for the JVM in JDK 9
+
+### Compiler Control
+
+  通过编译指令选项提供了一种控制JVM编译的方式。 控制的级别有 runtime-managable 和 method-specific. Compiler Control 替代了并且向后兼容CompileCommand.(CompileCommand是之前的选项， 这个选项向后兼容Compiler Control)
+
+  详情见[Compiler Control in Java Platform, Standard Edition Java Virtual Machine Guide.](Compiler Control in Java Platform, Standard Edition Java Virtual Machine Guide.)
+
+### Segment Code Cache
+
+  将代码缓存划分到不同的独立的段中。 每个段都包含了一个特定类型的已编译好的代码， 从而提升了性能， 为未来的扩展提供可能。
+
+  详情见[java in Java Platform, Standard Edition Tools Reference.](https://docs.oracle.com/javase/9/tools/java.htm#JSWOR624)
+
+### Dynamic Linking of Language-Defined Object Models
+
+  
